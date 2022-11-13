@@ -20,5 +20,5 @@ function index (data) {
       </div>
     )
   })
-  
+}
   module.exports = index
