@@ -1,4 +1,3 @@
-
 const React = require('react')
 const Def = require('../default.jsx')
 function index (data) {
@@ -20,5 +19,30 @@ function index (data) {
       </div>
     )
   })
-}
+  
+  
+  
+    return (
+      <Def>
+          <main>
+              <h1>Places to Rant or Rave About</h1>
+              <div className="row">
+                {placesFormatted}
+              </div>
+          </main>
+      </Def>
+    )
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
   module.exports = index
