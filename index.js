@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const router = require("./controllers/places")
 const methodOverride = require('method-override')
-
+const mongoose = require('mongoose')
 // Express Settings
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
