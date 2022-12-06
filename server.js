@@ -5,6 +5,8 @@ const app = express()
 const router = require("./controllers/places")
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const PORT = process.env.PORT
+
 // Express Settings
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
@@ -27,5 +29,6 @@ app.get('*', (req, res) => {
 })
 
 // Listen for Connections
-app.listen(process.env.PORT)
+// app.listen(PORT. () => console.log(`server is running in port ${PORT}`))
 
+module.exports= app;
