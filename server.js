@@ -2,10 +2,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const router = require("./controllers/places")
 const methodOverride = require('method-override')
-const mongoose = require('mongoose')
-const PORT = process.env.PORT
 
 // Express Settings
 app.set('views', __dirname + '/views')
@@ -16,9 +13,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 
 
-
+app.use('/places', require("./controllers/places"))
 // Controllers & Routes
-app.use('/places', router)
+//  app.use('/places', router)
 
 app.get('/', (req, res) => {
     res.render('home')
@@ -29,6 +26,6 @@ app.get('*', (req, res) => {
 })
 
 // Listen for Connections
-// app.listen(PORT. () => console.log(`server is running in port ${PORT}`))
+ app.listen(process.env.PORT);
 
 module.exports= app;
